@@ -5,3 +5,53 @@
     --lt-grey-color: #e5e7eb;
     --blue-color: #3882f6;
 }
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "hero hero"
+        "random random"
+        "quote quote"
+        "cta cta"
+        "footer footer";
+}
+
+header {
+    grid-area: header;
+    display: grid;
+    padding: 1.2em 3em;
+    grid-template-areas: 
+        "logo links";
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+#logo {
+    font-weight: bold;
+    font-size: 1.1em;
+    align-self: center;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+li {
+    justify-self: end;
+    align-self: center;
+}
+
+li>a {
+    text-decoration: none;
+    color: var(--white-color);
+}
